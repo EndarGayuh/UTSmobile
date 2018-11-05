@@ -31,21 +31,9 @@ public class InputDataKota extends AppCompatActivity {
 
         final Kota kota = (Kota) getIntent().getSerializableExtra("data");
 
-        if(kota!=null){
-            etNamaKota.setText(kota.getNama_kota());
-
-            btSubmit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    kota.setNama_kota(etNamaKota.getText().toString());
 
 
-                    updateKota(kota);
-                }
-            });
-        }
 
-        else {
             btSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -55,7 +43,7 @@ public class InputDataKota extends AppCompatActivity {
                     insertData(k);
                 }
             });
-        }
+
 
         btSubmit2.setOnClickListener(new View.OnClickListener() {
             @Override
